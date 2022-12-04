@@ -7,7 +7,7 @@
      - Set paths to the crossings of horizontal and vertical guidelines
      - Or set pathpoints to the closest guideline within a threshold
 - Create irregular guidelines
-- Save and recall sets of guidelines
+- Save and recall sets of guidelines - guidelines might be exchanged between different documents
 
 
 #### Installation:
@@ -19,7 +19,7 @@ something like: Inkscape/share/inkscape/extensions/
 <img src="https://user-images.githubusercontent.com/6894886/205482789-fd5db324-afcd-46e0-84f7-1997284474be.png" width=30% height=30%>
 <img src="https://user-images.githubusercontent.com/6894886/205482790-48505c7f-091c-4f7f-b14c-3a565d408133.png" width=30% height=30%>
 
-#### Create Irregular Guidelines and Save/Recall them
+#### Create Irregular Guidelines // Save and Recall Guidelines 
 <img src="https://user-images.githubusercontent.com/6894886/205482792-30814f5c-475b-474c-96bf-d37b2e128459.png" width=30% height=30%>
 <img src="https://user-images.githubusercontent.com/6894886/205482793-474cc2c4-c2ae-4848-b2f6-515ac8b3597f.png" width=30% height=30%>
 <img src="https://user-images.githubusercontent.com/6894886/205482794-770a26c1-77ee-45b0-9f78-82db72dd7534.png" width=30% height=30%>
