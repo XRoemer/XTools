@@ -8,3 +8,9 @@
      - Or set pathpoints to the closest guideline within a threshold
 - Create irregular guidelines
 - Save and recall sets of guidelines
+
+
+#### Installation:
+Download xtools.py and xtools.inx and put them into your Inkscape extensions folder.
+
+something like: Inkscape/share/inkscape/extensions/
