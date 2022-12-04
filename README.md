@@ -3,7 +3,7 @@
 
 #### Possibilities are:
 - Reduce: reduce close guidelines within a threshold. Find Regularities
-- Corrext paths: 
+- Correct paths: 
      - Set paths to the crossings of horizontal and vertical guidelines
      - Or set pathpoints to the closest guideline within a threshold
 - Create irregular guidelines
