@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>XTools</name>
+  <id>org.inkscape.xtools</id>
+  <label appearance="header">Some Tools For Handling Guidelines And Correcting Paths/Strokes</label>
+  
+  <param name="tab" type="notebook">
+  
+  
+    <page name="clean_gl" gui-text="Reduce">
+      <label appearance="header">Reduce close guidelines. Works for horizontal and vertical guidelines only</label>
+      <hbox>
+        <param name="clean_glines" type="bool" gui-text="clean guidelines" 
+           gui-description="Reduce nearby guidelines within the threshold.">false</param>
+           <spacer size="expand"/>
+        <param name="thresh_gl" type="string" gui-text="threshold (mm):">0.05</param>
+      </hbox>
+      <hbox>
+        <param name="find_reg" type="bool" gui-text="find regularities" 
+           gui-description="Search for repeated distances between guidelines within threshhold">false</param>
+           <spacer size="expand"/>
+        <param name="thresh_reg" type="string" gui-text="threshold (mm):">0.05</param>
+      </hbox>
+      <label></label>
+      <param name="name_glines_on" type="bool" gui-text="set description" gui-description="Set position of guidelines as description">false</param>
+      <param name="name_glines_off" type="bool" gui-text="remove description">false</param>
+    </page>
+    
+    
+    <page name="correct_paths" gui-text="Correct Paths">
+       <label appearance="header">Set paths to guidlines. Works for stroke-like paths only.</label>
+       <param name="select_all" type="bool" gui-text="select all" gui-description="True selects all, false uses selected">false</param>
+       <hbox>
+	       <param name="set_gl_to_knots" type="bool" gui-text="path to crossings" 
+	          gui-description="Sets pathpoints to the crossing of horizontal or vertical guidelines.">false</param>
+	          <spacer size="expand"/>
+	       <!-- <param name="thresh_crossings" type="string" gui-text="threshold (mm):">10</param> -->
+	     </hbox>
+	     <label></label>
+       <hbox>
+	       <param name="set_path_to_gl" type="bool" gui-text="path to guidelines" 
+	         gui-description="Set pathpoints to the closest point on a guideline. Doesn't work when path to crossings is checked">false</param>
+	       <spacer size="expand"/>
+	       <param name="thresh_path_to_gl" type="string" gui-text="threshold (mm):">10</param>
+       </hbox>
+    </page>
+    
+    
+    <page name="irr_gl" gui-text="Create Irregular">
+        <label appearance="header">Create irregular Guidlines by tipping their Distances.</label>
+        <param name="delete_glines" type="bool" gui-text="Delete old g-lines">false</param>
+        <label></label>
+        <vbox>
+          <label>Horizontal</label>
+          <hbox>
+	           <param name="dist_top" type="string" gui-text="distance top">4</param>
+	           <spacer size="expand"/>
+	           <param name="repeath" type="string"  gui-text="repetitions">4</param>
+	        </hbox>
+	        <param name="lines_distanceh" type="string" indent="2" gui-text="horizontal line distances" gui-description="For irregular distances use numbers separated by commas">12,6,12,30</param>
+        </vbox>
+        <label></label>
+        <vbox>
+        <label>Vertical</label>
+          <hbox>
+            <param name="dist_left" type="string" gui-text="distance left">4</param>
+            <spacer size="expand"/>
+            <param name="repeatv" type="string" gui-text="repetitions">4</param>
+          </hbox>
+          <param name="lines_distancev" type="string" indent="2" gui-text="vertical line distances" gui-description="For irregular distances use numbers separated by commas">12,6,12,30</param>
+        </vbox>
+    </page>
+    
+    
+    <page name="save_glines" gui-text="Save and Recall">
+		<label appearance="header">Save and Recall Sets of Guidelines</label>
+		<param name="get_info" type="bool" gui-text="info" gui-description="Get information about used slots in the file">false</param>
+		<param name="clear_glines" type="bool" gui-text="clear guidelines" gui-description="Remove existing guidelines">false</param>
+		<param name="folder" type="path" mode="folder" gui-text="folder">my/path/</param>
+			<hbox>
+				<vbox>
+					<param name="filename" type="string"  gui-text="filename" gui-description="Set filename. will be created, if it doesn't exist">g-lines</param>
+					<param name="slot_nr" type="int" gui-text="slot nr" 
+					   gui-description="Set slot number to read from or to write to. ATTENTION: When preview and saving are checked, changes are written directly to the file.">0</param>
+					<param name="gset_name" type="string" gui-text="slotname" gui-description="Optional, for differentiate sets of guidelines" >my-glines</param>
+				</vbox>
+				<spacer size="expand"></spacer>
+			</hbox>
+		<param name="use_read_or_write" type="bool" gui-text="save or read">false</param>
+		<param name="read_or_write" type="bool" indent="2" gui-text="save (checked) or read (unchecked)"
+						gui-description="ATTENTION: When preview and saving are checked, changes are written directly to the file.">false</param>
+    </page>
+    
+    
+   </param>
+    
+   
+  <effect>
+    <effects-menu>
+      <submenu name="XTools"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">xtools.py</command>
+  </script>
+</inkscape-extension>
