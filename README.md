@@ -15,7 +15,7 @@ Download xtools.py and xtools.inx and put them into your Inkscape extensions fol
 
 something like: Inkscape/share/inkscape/extensions/
 
-#### Set Paths to Guidelines
+#### Set Paths to closest Guidelines
 <img src="https://user-images.githubusercontent.com/6894886/205482789-fd5db324-afcd-46e0-84f7-1997284474be.png" width=30% height=30%>
 <img src="https://user-images.githubusercontent.com/6894886/205482790-48505c7f-091c-4f7f-b14c-3a565d408133.png" width=30% height=30%>
 
